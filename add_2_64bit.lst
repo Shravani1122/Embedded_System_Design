@@ -1,0 +1,55 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM,CODE,READONLY
+    2 00000000         START
+    3 00000000 E3A01902        LDR              R1,=0x00008000
+    4 00000004 E5914004        LDR              R4,[R1,#0x04]
+    5 00000008 E591500C        LDR              R5,[R1,#0x0C]
+    6 0000000C E0956004        ADDS             R6,R5,R4
+    7 00000010 E5816014        STR              R6,[R1,#0x14]
+    8 00000014 E5914000        LDR              R4,[R1]
+    9 00000018 E5915008        LDR              R5,[R1,#0x08]
+   10 0000001C E0A56004        ADC              R6,R5,R4
+   11 00000020 E5816010        STR              R6,[R1,#0x10]
+   12 00000024 EAFFFFFE 
+                       AGAIN   B                AGAIN
+   13 00000028                 END
+Command Line: --debug --xref --cpu=ARM9E --apcs=interwork --depend=.\add_2_64bi
+t.d -o.\add_2_64bit.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --pred
+efine="__EVAL SETA 1" --list=.\add_2_64bit.lst add_2_64bit.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+AGAIN 00000024
+
+Symbol: AGAIN
+   Definitions
+      At line 12 in file add_2_64bit.s
+   Uses
+      At line 12 in file add_2_64bit.s
+Comment: AGAIN used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file add_2_64bit.s
+   Uses
+      None
+Comment: PROGRAM unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file add_2_64bit.s
+   Uses
+      None
+Comment: START unused
+3 symbols
+334 symbols in table

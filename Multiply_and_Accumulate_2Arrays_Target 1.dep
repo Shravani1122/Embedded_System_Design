@@ -1,0 +1,2 @@
+Dependencies for Project 'Multiply_and_Accumulate_2Arrays', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Multiply_and_Accumulate_2Arrays.s)(0x60918E37)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\multiply_and_accumulate_2arrays.lst --xref -o .\multiply_and_accumulate_2arrays.o --depend .\multiply_and_accumulate_2arrays.d)

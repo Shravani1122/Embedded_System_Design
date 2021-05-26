@@ -1,0 +1,1 @@
+.\onesandzeros.o: onesandzeros.s

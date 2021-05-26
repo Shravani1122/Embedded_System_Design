@@ -1,0 +1,68 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM,CODE,READONLY
+    2 00000000         START
+    3 00000000                 ENTRY
+    4 00000000 E3A05004        MOV              R5,#04
+    5 00000004 E3A01902        LDR              R1,=0x00008000
+    6 00000008 E3A02A09        LDR              R2,=0x00009000
+    7 0000000C E5913000        LDR              R3,[R1]
+    8 00000010 E2811004 
+                       LOOP    ADD              R1,R1,#04
+    9 00000014 E5914000        LDR              R4,[R1]
+   10 00000018 E1530004        CMP              R3,R4
+   11 0000001C 9A000000        BLS              LOOP1
+   12 00000020 E1A03004        MOV              R3,R4
+   13 00000024 E2555001 
+                       LOOP1   SUBS             R5,R5,#01
+   14 00000028 E3550000        CMP              R5,#00
+   15 0000002C 1AFFFFF7        BNE              LOOP
+   16 00000030 E5823000        STR              R3,[R2]
+   17 00000034                 END
+Command Line: --debug --xref --cpu=ARM9E --apcs=interwork --depend=.\largestsma
+llest.d -o.\largestsmallest.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Includ
+e --predefine="__EVAL SETA 1" --list=.\largestsmallest.lst largestsmallest.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 00000010
+
+Symbol: LOOP
+   Definitions
+      At line 8 in file largestsmallest.s
+   Uses
+      At line 15 in file largestsmallest.s
+Comment: LOOP used once
+LOOP1 00000024
+
+Symbol: LOOP1
+   Definitions
+      At line 13 in file largestsmallest.s
+   Uses
+      At line 11 in file largestsmallest.s
+Comment: LOOP1 used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file largestsmallest.s
+   Uses
+      None
+Comment: PROGRAM unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file largestsmallest.s
+   Uses
+      None
+Comment: START unused
+4 symbols
+335 symbols in table

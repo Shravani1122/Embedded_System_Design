@@ -1,0 +1,1 @@
+.\arrange.o: ARRANGE.s

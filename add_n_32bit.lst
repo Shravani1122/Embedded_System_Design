@@ -1,0 +1,79 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM,CODE,READONLY
+    2 00000000         START
+    3 00000000                 ENTRY
+    4 00000000 E3A07000        LDR              R7,=0x00000000
+    5 00000004 E3A00B02        LDR              R0,=0x0000800
+    6 00000008 E3A01A09        LDR              R1,=0x00009000
+    7 0000000C E3A03005        LDR              R3,=0x00000005
+    8 00000010 E5904000        LDR              R4,[R0]
+    9 00000014 E2433001        SUB              R3,R3,#01
+   10 00000018 E5905004 
+                       BACK    LDR              R5,[R0,#0x04]
+   11 0000001C E0944005        ADDS             R4,R4,R5
+   12 00000020 3A000000        BCC              next
+   13 00000024 E2877001        ADD              R7,R7,#01
+   14 00000028 E2533001 
+                       next    SUBS             R3,R3,#0x01
+   15 0000002C 1AFFFFF9        BNE              BACK
+   16 00000030 E5817000        STR              R7,[R1]
+   17 00000034 E5814004        STR              R4,[R1,#0x04]
+   18 00000038 EAFFFFFE 
+                       AGAIN   B                AGAIN
+   19 0000003C                 END
+Command Line: --debug --xref --cpu=ARM9E --apcs=interwork --depend=.\add_n_32bi
+t.d -o.\add_n_32bit.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --pred
+efine="__EVAL SETA 1" --list=.\add_n_32bit.lst Add_N_32bit.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+AGAIN 00000038
+
+Symbol: AGAIN
+   Definitions
+      At line 18 in file Add_N_32bit.s
+   Uses
+      At line 18 in file Add_N_32bit.s
+Comment: AGAIN used once
+BACK 00000018
+
+Symbol: BACK
+   Definitions
+      At line 10 in file Add_N_32bit.s
+   Uses
+      At line 15 in file Add_N_32bit.s
+Comment: BACK used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file Add_N_32bit.s
+   Uses
+      None
+Comment: PROGRAM unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 2 in file Add_N_32bit.s
+   Uses
+      None
+Comment: START unused
+next 00000028
+
+Symbol: next
+   Definitions
+      At line 14 in file Add_N_32bit.s
+   Uses
+      At line 12 in file Add_N_32bit.s
+Comment: next used once
+5 symbols
+336 symbols in table

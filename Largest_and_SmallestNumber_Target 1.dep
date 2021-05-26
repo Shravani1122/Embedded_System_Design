@@ -1,0 +1,2 @@
+Dependencies for Project 'Largest_and_SmallestNumber', Target 'Target 1': (DO NOT MODIFY !)
+F (.\largestsmallest.s)(0x60918EA7)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\largestsmallest.lst --xref -o .\largestsmallest.o --depend .\largestsmallest.d)

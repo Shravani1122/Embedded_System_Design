@@ -1,0 +1,2 @@
+Dependencies for Project '2_outof_5', Target 'Target 1': (DO NOT MODIFY !)
+F (.\2_outof_5.s)(0x60918D29)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\2_outof_5.lst --xref -o .\2_outof_5.o --depend .\2_outof_5.d)

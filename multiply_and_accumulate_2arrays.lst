@@ -1,0 +1,79 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM, CODE, READONLY
+    2 00000000         ENTRY
+    3 00000000         START
+    4 00000000         
+    5 00000000 E3A04000        LDR              R4,=0x00000000
+    6 00000004 E3A01902        LDR              R1,=0x00008000 ;
+    7 00000008 E59F2020        LDR              R2,=0X00008020 ;
+    8 0000000C E59F3020        LDR              R3,=0X0000800A
+    9 00000010 E0D150B2 
+                       BACK    LDRH             R5,[R1],#0x02
+   10 00000014 E0D260B2        LDRH             R6,[R2],#0x02
+   11 00000018 E0070695        MUL              R7,R5,R6
+   12 0000001C E0844007        ADD              R4,R4,R7
+   13 00000020 E1510003        CMP              R1,R3
+   14 00000024 1AFFFFF9        BNE              BACK
+   15 00000028 E5814002        STR              R4,[R1,#02]
+   16 0000002C EAFFFFFE 
+                       AGAIN   B                AGAIN
+   17 00000030                 END
+              00008020 
+              0000800A 
+Command Line: --debug --xref --cpu=ARM9E --apcs=interwork --depend=.\multiply_a
+nd_accumulate_2arrays.d -o.\multiply_and_accumulate_2arrays.o -IC:\Keil\ARM\RV3
+1\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --list=.\multiply
+_and_accumulate_2arrays.lst Multiply_and_Accumulate_2Arrays.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+AGAIN 0000002C
+
+Symbol: AGAIN
+   Definitions
+      At line 16 in file Multiply_and_Accumulate_2Arrays.s
+   Uses
+      At line 16 in file Multiply_and_Accumulate_2Arrays.s
+Comment: AGAIN used once
+BACK 00000010
+
+Symbol: BACK
+   Definitions
+      At line 9 in file Multiply_and_Accumulate_2Arrays.s
+   Uses
+      At line 14 in file Multiply_and_Accumulate_2Arrays.s
+Comment: BACK used once
+ENTRY 00000000
+
+Symbol: ENTRY
+   Definitions
+      At line 2 in file Multiply_and_Accumulate_2Arrays.s
+   Uses
+      None
+Comment: ENTRY unused
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file Multiply_and_Accumulate_2Arrays.s
+   Uses
+      None
+Comment: PROGRAM unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 3 in file Multiply_and_Accumulate_2Arrays.s
+   Uses
+      None
+Comment: START unused
+5 symbols
+338 symbols in table

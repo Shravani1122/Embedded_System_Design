@@ -1,0 +1,2 @@
+Dependencies for Project 'Arrange_ascendingdescending_BubbleSort (10)', Target 'Target 1': (DO NOT MODIFY !)
+F (.\ARRANGE.s)(0x60918F1D)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\arrange.lst --xref -o .\arrange.o --depend .\arrange.d)

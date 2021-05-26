@@ -1,0 +1,2 @@
+Dependencies for Project 'Add_N_32bit', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Add_N_32bit.s)(0x60918CB4)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\add_n_32bit.lst --xref -o .\add_n_32bit.o --depend .\add_n_32bit.d)

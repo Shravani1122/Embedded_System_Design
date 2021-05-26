@@ -1,0 +1,2 @@
+Dependencies for Project 'Add_2_64bit', Target 'Target 1': (DO NOT MODIFY !)
+F (.\add_2_64bit.s)(0x60918C37)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\add_2_64bit.lst --xref -o .\add_2_64bit.o --depend .\add_2_64bit.d)

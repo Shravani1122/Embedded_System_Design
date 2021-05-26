@@ -1,0 +1,73 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             PROGRAM, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         START
+    4 00000000 E59F0028        LDR              R0, =0x00008000-4 
+                                                            ;START ADDRESS-4
+    5 00000004 E59F1028        LDR              R1, =0x00008014 ;END ADDRESS
+    6 00000008 E59F2028        LDR              R2, =0x00009000-4 ;
+    7 0000000C E59F3028        LDR              R3, =0x00009014
+    8 00000010 00 00 00 
+              00 00 00 
+              00 00 00 
+              00               space            10
+    9 0000001A 00 00 E5B03004 
+                       BACK    LDR              R3, [R0, #04]!
+   10 00000020 E5A23004        STR              R3, [R2, #04]!
+   11 00000024 E1510000        CMP              R1, R0
+   12 00000028 1AFFFFFB        BNE              BACK
+   13 0000002C EAFFFFFE 
+                       AGAIN   B                AGAIN
+   14 00000030                 END
+              00007FFC 
+              00008014 
+              00008FFC 
+              00009014 
+Command Line: --debug --xref --cpu=ARM9E --apcs=interwork --depend=.\a_to_b.d -
+o.\a_to_b.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__E
+VAL SETA 1" --list=.\a_to_b.lst A_to_B.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+AGAIN 0000002C
+
+Symbol: AGAIN
+   Definitions
+      At line 13 in file A_to_B.s
+   Uses
+      At line 13 in file A_to_B.s
+Comment: AGAIN used once
+BACK 0000001C
+
+Symbol: BACK
+   Definitions
+      At line 9 in file A_to_B.s
+   Uses
+      At line 12 in file A_to_B.s
+Comment: BACK used once
+PROGRAM 00000000
+
+Symbol: PROGRAM
+   Definitions
+      At line 1 in file A_to_B.s
+   Uses
+      None
+Comment: PROGRAM unused
+START 00000000
+
+Symbol: START
+   Definitions
+      At line 3 in file A_to_B.s
+   Uses
+      None
+Comment: START unused
+4 symbols
+337 symbols in table

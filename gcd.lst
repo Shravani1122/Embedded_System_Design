@@ -1,0 +1,67 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             GCD, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E3A00019        MOV              R0, #25
+    4 00000004 E3A01005        MOV              R1, #5
+    5 00000008 E1500001 
+                       BACK    CMP              R0, R1
+    6 0000000C 0A000004        BEQ              LABEL
+    7 00000010 BA000001        BLT              LESSD
+    8 00000014 E0400001        SUB              R0, R0, R1
+    9 00000018 EAFFFFFA        B                BACK
+   10 0000001C E0411000 
+                       LESSD   SUB              R1, R1, R0
+   11 00000020 EAFFFFF8        B                BACK
+   12 00000024 EAFFFFFE 
+                       LABEL   B                LABEL
+   13 00000028                 END
+Command Line: --debug --xref --cpu=ARM9E --apcs=interwork --depend=.\gcd.d -o.\
+gcd.o -IC:\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include --predefine="__EVAL SE
+TA 1" --list=.\gcd.lst GCD.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+BACK 00000008
+
+Symbol: BACK
+   Definitions
+      At line 5 in file GCD.s
+   Uses
+      At line 9 in file GCD.s
+      At line 11 in file GCD.s
+
+GCD 00000000
+
+Symbol: GCD
+   Definitions
+      At line 1 in file GCD.s
+   Uses
+      None
+Comment: GCD unused
+LABEL 00000024
+
+Symbol: LABEL
+   Definitions
+      At line 12 in file GCD.s
+   Uses
+      At line 6 in file GCD.s
+      At line 12 in file GCD.s
+
+LESSD 0000001C
+
+Symbol: LESSD
+   Definitions
+      At line 10 in file GCD.s
+   Uses
+      At line 7 in file GCD.s
+Comment: LESSD used once
+4 symbols
+335 symbols in table

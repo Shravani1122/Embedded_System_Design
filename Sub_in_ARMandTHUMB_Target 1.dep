@@ -1,0 +1,2 @@
+Dependencies for Project 'Sub_in_ARMandTHUMB', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Sub_in_ARMandTHUMB.s)(0x60918DBA)(--cpu ARM9E --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include--list .\sub_in_armandthumb.lst --xref -o .\sub_in_armandthumb.o --depend .\sub_in_armandthumb.d)
